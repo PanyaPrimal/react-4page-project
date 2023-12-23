@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  --primary: #ffffff;
+  --secondary-color: #565961;
+  --border-color: #000;
+  --text-color: #ffffff;
+  --background-color: #fff;
+  --border-radius: 10px;
+  --aaa: #C9D1C8;
+  --forest: #04202C;
+  --evergreen: #304040;
+  --pine: #5B8065;
+  --midnight-blue: #1e1f26;
+  --indigo: #283655;
+  --blueberry: #4D648D;
+  --purple-blue: #D0E1F9;
+  --deep-water: #003B46;
+  --ocean: #07575B;
+  --wave: #66A5Ad;
+  --sea-foam: #C4DFE6;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lato', 'Poppins', sans-serif;
+  background-color: var(--blueberry);
+  color: var(--forest);
+}
+
+main {
+  min-height: 80vh;
+  width: 100%;
+}
+
+header {
+  max-width: 100%;
+  background-color: var(--purple-blue);
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: var(--purple-blue);
+  display: flex;
+  justify-content: center;
+}
