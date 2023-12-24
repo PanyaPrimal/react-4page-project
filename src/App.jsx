@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import AboutMePage from './components/pages/AboutMePage/AboutMePage';
-import GalleryPage from './components/pages/GalleryPage';
+import GalleryPage from './components/pages/GalleryPage/GalleryPage';
 import ContactsPage from './components/pages/ContactsPage';
 import MessagesPage from './components/pages/MessagesPage';
 
