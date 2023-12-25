@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import userReducer from './userReducer';
 import messagesReducer from './messagesReducer';
+import contactsReducer from './contactsReducer';
 
 const rootReducer = combineReducers({
-  user: userReducer,
+  contacts: contactsReducer,
   messages: messagesReducer,
 });
 

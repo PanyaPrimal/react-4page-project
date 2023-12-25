@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Layout from './components/layout/Layout';
 import AboutMePage from './components/pages/AboutMePage/AboutMePage';
 import GalleryPage from './components/pages/GalleryPage/GalleryPage';
-import ContactsPage from './components/pages/ContactsPage';
+import ContactsPage from './components/pages/ContactsPage/ContactsPage';
 import MessagesPage from './components/pages/MessagesPage';
 
 const App = () => {
