@@ -1,0 +1,12 @@
+.contacts-page {
+  color: wheat;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+}
+
+.contact-name {
+  font-weight: bold;
+}

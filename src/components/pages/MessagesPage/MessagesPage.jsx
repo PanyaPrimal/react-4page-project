@@ -18,6 +18,7 @@ const MessagesPage = () => {
   const [nameSuggestions, setNameSuggestions] = useState([]);
   const [editedMessageId, setEditedMessageId] = useState(null);
   const [hoveredMessageId, setHoveredMessageId] = useState(null);
+  const [showDeleteAllConfirmation, setShowDeleteAllConfirmation] = useState(false);
 
   const sendMessage = () => {
     const newMessage = {
@@ -54,30 +55,35 @@ const MessagesPage = () => {
   };
 
   const clearAllMessagesHandler = () => {
-    dispatch(clearAllMessages());
+    openDeleteAllConfirmation();
   };
 
-const getNumberSuggestions = (value) => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
+  const handleClearAllMessages = () => {
+    dispatch(clearAllMessages());
+    closeDeleteAllConfirmation();
+  };
 
-  return inputLength === 0
-    ? []
-    : contacts.filter((contact) => 
-        contact.phoneNumber && contact.phoneNumber.toLowerCase().includes(inputValue)
-      );
-};
+  const getNumberSuggestions = (value) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
 
-const getNameSuggestions = (value) => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
+    return inputLength === 0
+      ? []
+      : contacts.filter((contact) => 
+          contact.phoneNumber && contact.phoneNumber.toLowerCase().includes(inputValue)
+        );
+  };
 
-  return inputLength === 0
-    ? []
-    : contacts.filter((contact) => 
-        contact.fullName && contact.fullName.toLowerCase().includes(inputValue)
-      );
-};
+  const getNameSuggestions = (value) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength === 0
+      ? []
+      : contacts.filter((contact) => 
+          contact.fullName && contact.fullName.toLowerCase().includes(inputValue)
+        );
+  };
 
   const onNumberChange = (e) => {
     const value = e.target.value || '';
@@ -145,32 +151,44 @@ const getNameSuggestions = (value) => {
     openModalEdit();
   };
 
-const updateMessage = () => {
-  if (editedMessageId) {
-    const updatedMessage = {
-      id: editedMessageId,
-      text: messageText,
-      recipientName,
-      recipientNumber,
-    };
+  const updateMessage = () => {
+    if (editedMessageId) {
+      const updatedMessage = {
+        id: editedMessageId,
+        text: messageText,
+        recipientName,
+        recipientNumber,
+      };
 
-    dispatch(editMessage(editedMessageId, updatedMessage));
-    closeModal();
-    setMessageText('');
-    setRecipientNumber('');
-    setRecipientName('');
-  }
-};
+      dispatch(editMessage(editedMessageId, updatedMessage));
+      closeModal();
+      setMessageText('');
+      setRecipientNumber('');
+      setRecipientName('');
+    }
+  };
+
+  const openDeleteAllConfirmation = () => {
+    setShowDeleteAllConfirmation(true);
+  };
+
+  const closeDeleteAllConfirmation = () => {
+    setShowDeleteAllConfirmation(false);
+  };
 
   return (
-    <>
+    <div className='messages-page'>
+      {(showModalSend || showModalEdit || showDeleteAllConfirmation) && (
+        <div className='modal-overlay'></div>
+      )}
+
       <h1 className='fs-2 m-4'>Messages Page</h1>
       <div className='d-flex flex-column gap-3'>
         <div>
-          <button className='btn btn-primary me-2' onClick={openModalSend}>
+          <button className='button me-2' onClick={openModalSend}>
             Send Message
           </button>
-          <button className='btn btn-danger' onClick={clearAllMessagesHandler}>
+          <button className='button button-danger' onClick={clearAllMessagesHandler}>
             Delete All Messages
           </button>
         </div>
@@ -239,15 +257,15 @@ const updateMessage = () => {
                 </div>
                 <div className='modal-footer'>
                 
-                  <button type='button' className='btn btn-secondary' onClick={closeModal}>
+                  <button type='button' className='button button-modal btn-secondary' onClick={closeModal}>
                     Cancel
                   </button>
                   { showModalSend ? (
-                    <button type='button' className='btn btn-primary' onClick={sendMessage}>
+                    <button type='button' className='button button-modal btn-primary' onClick={sendMessage}>
                       Send
                     </button>
                   ) : (
-                    <button type='button' className='btn btn-primary' onClick={updateMessage}>
+                    <button type='button' className='button button-modal btn-primary' onClick={updateMessage}>
                       Save
                     </button>
                   )}
@@ -265,13 +283,24 @@ const updateMessage = () => {
               onMouseEnter={() => handleMouseEnter(message.id)}
               onMouseLeave={handleMouseLeave}
             >
-              {`Message: ${message.text} - Recipient: ${message.recipientName} - Number: ${message.recipientNumber}`}
+              <div className="message-details">
+                <div className='d-flex'>
+                  <div className="message-label">{`Message: `}</div>
+                  <div className="message-text">{message.text}</div>
+                </div>
+                <div className="recipient-details">
+                  <span className="recipient-label">Recipient:</span>
+                  <span className="recipient-name">{message.recipientName}</span>
+                  <span className="recipient-number"> {message.recipientNumber}</span>
+                </div>
+              </div>
+
               {hoveredMessageId === message.id && (
                 <div>
-                  <button className='btn btn-warning me-2' onClick={() => editMessageHandler(message.id)}>
+                  <button className='button button-modal btn-warning me-2' onClick={() => editMessageHandler(message.id)}>
                     Edit
                   </button>
-                  <button className='btn btn-danger' onClick={() => deleteMessageHandler(message.id)}>
+                  <button className='button button-modal button-danger' onClick={() => deleteMessageHandler(message.id)}>
                     X
                   </button>
                 </div>
@@ -280,7 +309,27 @@ const updateMessage = () => {
           ))}
         </ul>
       </div>
-    </>
+
+      {showDeleteAllConfirmation && (
+        <div className='modal' style={{ display: 'block' }}>
+          <div className='modal-dialog'>
+            <div className='modal-content'>
+              <div className='modal-body fw-bold fs-2'>
+                <p>Are you sure you want to delete all messages?</p>
+              </div>
+              <div className='modal-footer'>
+                <button type='button' className='button button-modal btn-secondary' onClick={closeDeleteAllConfirmation}>
+                  Cancel
+                </button>
+                <button type='button' className='button button-modal btn-danger' onClick={handleClearAllMessages}>
+                  Delete All
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

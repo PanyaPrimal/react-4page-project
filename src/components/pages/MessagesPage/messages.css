@@ -1,6 +1,22 @@
-.btn {
-  height: 20px;
-  padding: 0px 12px;
-  text-align: center;
-  align-self: center;
+.messages-page {
+  color: wheat;
+}
+.message-details {
+  flex-grow: 1;
+}
+
+.recipient-details {
+  display: flex;
+  align-items: center;
+}
+
+.message-label,
+.recipient-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.recipient-name,
+.recipient-number {
+  margin-right: 5px;
 }
