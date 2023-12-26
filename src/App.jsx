@@ -4,7 +4,7 @@ import Layout from './components/layout/Layout';
 import AboutMePage from './components/pages/AboutMePage/AboutMePage';
 import GalleryPage from './components/pages/GalleryPage/GalleryPage';
 import ContactsPage from './components/pages/ContactsPage/ContactsPage';
-import MessagesPage from './components/pages/MessagesPage';
+import MessagesPage from './components/pages/MessagesPage/MessagesPage';
 
 const App = () => {
   return (

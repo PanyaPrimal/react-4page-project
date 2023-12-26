@@ -60,7 +60,14 @@ header {
 footer {
   background-color: var(--purple-blue);
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 100px;
 }
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+  }  
+}
+

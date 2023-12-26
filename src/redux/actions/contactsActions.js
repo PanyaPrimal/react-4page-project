@@ -13,6 +13,6 @@ export const saveContact = (updatedContact) => ({
   payload: updatedContact,
 })
 
-export const deleteAllContacts  = (contactId) => ({
+export const deleteAllContacts  = () => ({
   type: 'DELETE_ALL_CONTACTS',
 });
