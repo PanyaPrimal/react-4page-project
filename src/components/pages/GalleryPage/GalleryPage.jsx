@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './gallery.css';
-import imagesData from '../../../data/gallery.tattoo.json';
+import imagesData from './../../../data/gallery.tattoo.json';
 
 const GalleryPage = () => {
-
-
   const images = imagesData.map((imageInfo, index) => ({
     id: index + 1,
     src: `/assets/gallery-tatto/${index + 1}.jpg`,
@@ -103,6 +101,6 @@ const GalleryPage = () => {
       )}
     </div>
   );
-};
+}; 
 
 export default GalleryPage;
