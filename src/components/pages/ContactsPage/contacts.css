@@ -8,5 +8,26 @@
 }
 
 .contact-name {
+  color: var(--forest);
   font-weight: bold;
+}
+
+
+.list-group {
+  padding-right: 10px;
+  min-height: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.list-group::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list-group::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: var(--border-radius);
 }

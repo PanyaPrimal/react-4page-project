@@ -158,7 +158,7 @@ const ContactsPage = () => {
             ) : (
               <div className='d-flex justify-content-between'>
                 <div className="contact-details">
-                  <span className="contact-name">{contact.fullName}:</span>
+                  <span className="contact-name">{`${contact.fullName} :`}</span>
                   <span className="contact-number"> {contact.phoneNumber}</span>
                 </div>
                 {hoveredContactId === contact.id && (

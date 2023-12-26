@@ -6,7 +6,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='position-sticky bottom-0'>
       <div className='social-icons d-flex gap-4'>
         <a href='https://github.com/PanyaPrimal'>
           <FontAwesomeIcon color='var(--forest)' icon={faGithub} size='2x' />
