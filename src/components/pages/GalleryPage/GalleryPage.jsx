@@ -5,8 +5,7 @@ import imagesData from './../../../data/gallery.tattoo.json';
 const GalleryPage = () => {
   const images = imagesData.map((imageInfo, index) => ({
     id: index + 1,
-    src: `/assets/gallery-tatto/${index + 1}.jpg`,
-    caption: `Description of tattoo # ${index + 1}`,
+    src: imageInfo.src,
   }));
 
  const [currentImage, setCurrentImage] = useState(null);

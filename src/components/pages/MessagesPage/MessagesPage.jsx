@@ -45,9 +45,6 @@ const MessagesPage = () => {
 
     dispatch(addMessage(newMessage));
     closeModal();
-    setMessageText('');
-    setRecipientNumber('');
-    setRecipientName('');
   };
 
   const deleteMessageHandler = (id) => {
@@ -122,7 +119,7 @@ const MessagesPage = () => {
   const openModalSend = () => {
     setShowModalSend(true);
   } 
-
+  
   const openModalEdit = () => setShowModalEdit(true);
 
   const closeModal = () => {
@@ -132,6 +129,8 @@ const MessagesPage = () => {
     setRecipientNumber('');
     setRecipientName('');
     setEditedMessageId(null);
+    setNameSuggestions([]);
+    setNumberSuggestions([])
   };
 
   const handleMouseEnter = (id) => {
@@ -162,9 +161,6 @@ const MessagesPage = () => {
 
       dispatch(editMessage(editedMessageId, updatedMessage));
       closeModal();
-      setMessageText('');
-      setRecipientNumber('');
-      setRecipientName('');
     }
   };
 
