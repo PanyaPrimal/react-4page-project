@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imageUrl": "/assets/projects-examples/league.png",
+    "imageUrl": "assets/projects-examples/league.png",
     "title": "Justice League Landing Page",
     "description": "Adaptive landing page for three resolutions built with HTML, SCSS, and BEM. Includes a simple slider and pagespeed optimization.",
     "demonstration": "https://panyaprimal.github.io/tv_show_landing_page/src/",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "imageUrl": "/assets/projects-examples/todo.png",
+    "imageUrl": "assets/projects-examples/todo.png",
     "title": "React TODO Application",
     "description": "TODO app built with React using API requests. Features good functionality for user interactions.",
     "demonstration": "https://panyaprimal.github.io/react_todo-app-with-api/",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "imageUrl": "/assets/projects-examples/hover.png",
+    "imageUrl": "assets/projects-examples/hover.png",
     "title": "Hover Cells React App",
     "description": "Interactive test project on React featuring hover cells. Mini game with parameter fetching, mod choosing, conditional rendering, and controllable forms.",
     "demonstration": "https://panyaprimal.github.io/react-hover-cell-app/",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "imageUrl": "/assets/projects-examples/pets.png",
+    "imageUrl": "assets/projects-examples/pets.png",
     "title": "Pets Paw",
     "description": "Next.js + Redux + Tailwind.css + SCSS application with API, voting, search, filtering. Multi-display adaptation, dark-light themes, SSR, CSR, pre-rendering, routing, and other Next.js features demonstrated.",
     "demonstration": "https://pets-paw-app-ten.vercel.app/",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "imageUrl": "/assets/projects-examples/gadjets.png",
+    "imageUrl": "assets/projects-examples/gadjets.png",
     "title": "Gadgets Shop",
     "description": "Full-stack team project completed in 70 steps using a kanban desk. Responsive adaptive application. React + Redux + SCSS + Node + Mongo. I took part in the UI development.",
     "demonstration": "https://gadjets-store-client.vercel.app/",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "imageUrl": "/assets/projects-examples/bike.png",
+    "imageUrl": "assets/projects-examples/bike.png",
     "title": "Bike Shop Landing",
     "description": "Landing page for Bikes Shop with adaptive layout, burger menu animations, maintained with SCSS using BEM methodology according to the designer's mockup.",
     "demonstration": "https://panyaprimal.github.io/layout_miami/",

@@ -1,102 +1,102 @@
 [
   {
     "id": 1,
-    "src": "/assets/gallery-tatto/1.jpg",
+    "src": "assets/gallery-tatto/1.jpg",
     "caption": "Description of tattoo # 1"
   },
   {
     "id": 2,
-    "src": "/assets/gallery-tatto/2.jpg",
+    "src": "assets/gallery-tatto/2.jpg",
     "caption": "Description of tattoo # 2"
   },
   {
     "id": 3,
-    "src": "/assets/gallery-tatto/3.jpg",
+    "src": "assets/gallery-tatto/3.jpg",
     "caption": "Description of tattoo # 3"
   },
   {
     "id": 4,
-    "src": "/assets/gallery-tatto/4.jpg",
+    "src": "assets/gallery-tatto/4.jpg",
     "caption": "Description of tattoo # 4"
   },
   {
     "id": 5,
-    "src": "/assets/gallery-tatto/5.jpg",
+    "src": "assets/gallery-tatto/5.jpg",
     "caption": "Description of tattoo # 5"
   },
   {
     "id": 6,
-    "src": "/assets/gallery-tatto/6.jpg",
+    "src": "assets/gallery-tatto/6.jpg",
     "caption": "Description of tattoo # 6"
   },
   {
     "id": 7,
-    "src": "/assets/gallery-tatto/7.jpg",
+    "src": "assets/gallery-tatto/7.jpg",
     "caption": "Description of tattoo # 7"
   },
   {
     "id": 8,
-    "src": "/assets/gallery-tatto/8.jpg",
+    "src": "assets/gallery-tatto/8.jpg",
     "caption": "Description of tattoo # 8"
   },
   {
     "id": 9,
-    "src": "/assets/gallery-tatto/9.jpg",
+    "src": "assets/gallery-tatto/9.jpg",
     "caption": "Description of tattoo # 9"
   },
   {
     "id": 10,
-    "src": "/assets/gallery-tatto/10.jpg",
+    "src": "assets/gallery-tatto/10.jpg",
     "caption": "Description of tattoo # 10"
   },
   {
     "id": 11,
-    "src": "/assets/gallery-tatto/11.jpg",
+    "src": "assets/gallery-tatto/11.jpg",
     "caption": "Description of tattoo # 11"
   },
   {
     "id": 12,
-    "src": "/assets/gallery-tatto/12.jpg",
+    "src": "assets/gallery-tatto/12.jpg",
     "caption": "Description of tattoo # 12"
   },
   {
     "id": 13,
-    "src": "/assets/gallery-tatto/13.jpg",
+    "src": "assets/gallery-tatto/13.jpg",
     "caption": "Description of tattoo # 13"
   },
   {
     "id": 14,
-    "src": "/assets/gallery-tatto/14.jpg",
+    "src": "assets/gallery-tatto/14.jpg",
     "caption": "Description of tattoo # 14"
   },
   {
     "id": 15,
-    "src": "/assets/gallery-tatto/15.jpg",
+    "src": "assets/gallery-tatto/15.jpg",
     "caption": "Description of tattoo # 15"
   },
   {
     "id": 16,
-    "src": "/assets/gallery-tatto/16.jpg",
+    "src": "assets/gallery-tatto/16.jpg",
     "caption": "Description of tattoo # 16"
   },
   {
     "id": 17,
-    "src": "/assets/gallery-tatto/17.jpg",
+    "src": "assets/gallery-tatto/17.jpg",
     "caption": "Description of tattoo # 17"
   },
   {
     "id": 18,
-    "src": "/assets/gallery-tatto/18.jpg",
+    "src": "assets/gallery-tatto/18.jpg",
     "caption": "Description of tattoo # 18"
   },
   {
     "id": 19,
-    "src": "/assets/gallery-tatto/19.jpg",
+    "src": "assets/gallery-tatto/19.jpg",
     "caption": "Description of tattoo # 19"
   },
   {
     "id": 20,
-    "src": "/assets/gallery-tatto/20.jpg",
+    "src": "assets/gallery-tatto/20.jpg",
     "caption": "Description of tattoo # 20"
   }
 ]

@@ -2,7 +2,7 @@
   "name": "react-4page-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://panyaprimal.github.io/",
+  "homepage": "https://panyaprimal.github.io/react-4page-project",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
