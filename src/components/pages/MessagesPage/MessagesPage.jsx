@@ -40,7 +40,7 @@ const MessagesPage = () => {
     );
 
     if (!existingContact) {
-      dispatch(addContact(newContact));
+      dispatch(addContact({ id: Date.now(), ...newContact }));
     }
 
     dispatch(addMessage(newMessage));

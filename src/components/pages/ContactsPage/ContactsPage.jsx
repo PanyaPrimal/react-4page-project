@@ -4,7 +4,6 @@ import {
   addContact,
   deleteAllContacts,
   deleteContact,
-  editContact,
   saveContact,
 } from '../../../redux/actions/contactsActions';
 import styles from './contacts.css';
